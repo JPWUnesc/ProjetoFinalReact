@@ -8,7 +8,8 @@ import Login from "./pages/Login";
 import Navbar from "./pages/Navbar";
 import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
-import Cartoes from './pages/Cartoes';
+import Cartoes from './pages/Cartoes'
+import Objetivos from './pages/Objetivos'
 
 const PrivateRoutes = ({ component: Component, ...rest }) => (
   <Route
@@ -39,7 +40,8 @@ const LoginRoute = ({ component: Component, ...rest }) => (
 const RoutesInNav = () =>  (
    <Switch>
     <Route exact path="/dashboard" component={Dashboard} />
-    <Route exact path="/cartoes" component={Cartoes} />
+    <Route exact path="/cartoes" component={Cartoes}/>
+    <Route exact path="/objetivos" component={Objetivos}/>
     <Route path="*" component={NotFound} />
   </Switch>
 );
