@@ -160,20 +160,19 @@ export default function Table(props) {
         {alert.message}
       </Alert>
     </Snackbar>
-      <Paper className={classes.paper}>
       <MaterialTable
         title={props.named}
         columns={props.columns}
         icons={tableIcons}
         data={query => getData(query)}
         localization= {localization}
+        style= {{padding: 20}}
         editable={{
           onRowAdd: (newData) => addData(newData),
           onRowUpdate: (newData, oldData) => updateData(oldData._id, newData),
           onRowDelete: (oldData) => removeData(oldData._id),
         }}
       />
-    </Paper>
   </Grid>
   );
 }

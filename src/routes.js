@@ -10,6 +10,9 @@ import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
 import Cartoes from './pages/Cartoes'
 import Objetivos from './pages/Objetivos'
+import Categorias from "./pages/Categorias";
+import Estabelecimentos from "./pages/Estabelecimentos";
+import Movimentacoes from "./pages/Movimentacoes";
 
 const PrivateRoutes = ({ component: Component, ...rest }) => (
   <Route
@@ -42,6 +45,9 @@ const RoutesInNav = () =>  (
     <Route exact path="/dashboard" component={Dashboard} />
     <Route exact path="/cartoes" component={Cartoes}/>
     <Route exact path="/objetivos" component={Objetivos}/>
+    <Route exact path="/categorias" component={Categorias}/>
+    <Route exact path="/estabelecimentos" component={Estabelecimentos}/>
+    <Route exact path="/movimentacoes" component={Movimentacoes}/>
     <Route path="*" component={NotFound} />
   </Switch>
 );
