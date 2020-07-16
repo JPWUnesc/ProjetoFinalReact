@@ -1,6 +1,14 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme  } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
+
+export const getTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#e8ae4d'
+    }
+  }
+});
 
 export const UseStyles = makeStyles((theme) => ({
   root: {
@@ -81,6 +89,9 @@ export const UseStyles = makeStyles((theme) => ({
   },
   mainColor: {
     backgroundColor: '#e8ae4d'
+  },
+  mainFontColor: {
+    color: '#e8ae4d'
   },
   logo:{
     width: '40px'

@@ -22,7 +22,7 @@ class Login extends Component {
     } else {
       api.post("/auth/authenticate", { email, password }).then(response =>{
         login(response.data.content.token);
-        this.props.history.push("/app");
+        this.props.history.push("/");
       }).catch(err=>{
         console.log(err);
         var error = "Houve um problema com o login, verifique suas credenciais.";

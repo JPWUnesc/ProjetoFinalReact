@@ -21,6 +21,9 @@ body, html {
 }
 th {
   font-weight: 700 !important
+},
+.MuiTypography-colorPrimary {
+  color: #e8ae4d;
 }
 `;
 

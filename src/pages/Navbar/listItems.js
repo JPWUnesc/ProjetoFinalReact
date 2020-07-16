@@ -24,7 +24,7 @@ export function mainListItems(onClickItem) {
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItem>
-      <ListItem button onClick={() => onClickItem("Orders")} component={Link} to="/movimentacoes">
+      <ListItem button onClick={() => onClickItem("Movimentações")} component={Link} to="/movimentacoes">
         <ListItemIcon>
           <MonetizationOnIcon />
         </ListItemIcon>

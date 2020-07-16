@@ -33,6 +33,7 @@ export default function Movimentacoes(){
               { title: "Nome", field: "nome" },
               { title: "Descrição", field: "descricao" },
               { title: 'Valor', field: 'valor', type: 'currency', currencySetting: {locale: 'pt-BR', currencyCode: 'BRL'}},
+              { title: "Data", field: "data", type: 'datetime'},
               {
                 title: 'Tipo',
                 field: 'tipo',

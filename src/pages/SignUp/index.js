@@ -23,7 +23,7 @@ class SignUp extends Component {
     } else {
       api.post("/auth/register", { email, password }).then(response =>{
         login(response.data.content.token);
-        this.props.history.push("/app");
+        this.props.history.push("/");
       }).catch(err=>{
         var error = "Ocorreu um erro ao registrar sua conta.";
         if(err.response){

@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -17,9 +18,11 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { mainListItems, titleDrawer } from './listItems';
 import { BrowserRouter, Route, useLocation } from "react-router-dom"
-import { UseStyles } from './styles';
+import { UseStyles, getTheme } from './styles';
+import { logout } from "../../services/auth";
 
 import Logo from "../../assets/money.png";
 
@@ -73,10 +76,8 @@ export default function Navbar(props) {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
           {title}
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
+          <IconButton color="inherit" onClick={logout} href='/'>
+              <ExitToAppIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -101,9 +102,9 @@ export default function Navbar(props) {
           <main className={classes.content}>
             <div className={classes.appBarSpacer}/>
             <Container maxWidth="lg" className={classes.container}>
-              <Grid container spacing={3}>
+              <MuiThemeProvider theme={getTheme}>
                 {props.RoutesInNav()}
-              </Grid>
+              </MuiThemeProvider>
               <Box pt={4}>
                 <Copyright />
               </Box>

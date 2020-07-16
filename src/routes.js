@@ -42,6 +42,7 @@ const LoginRoute = ({ component: Component, ...rest }) => (
 
 const RoutesInNav = () =>  (
    <Switch>
+   <Route exact path="/" component={Dashboard} />
     <Route exact path="/dashboard" component={Dashboard} />
     <Route exact path="/cartoes" component={Cartoes}/>
     <Route exact path="/objetivos" component={Objetivos}/>
